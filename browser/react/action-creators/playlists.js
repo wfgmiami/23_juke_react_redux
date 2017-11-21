@@ -52,6 +52,7 @@ export const addNewPlaylist = playlistName => {
 };
 
 export const loadAllSongs = () => {
+
   return dispatch => {
     axios.get('/api/songs')
       .then(response => {

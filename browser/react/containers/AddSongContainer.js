@@ -2,6 +2,8 @@ import React from 'react';
 import AddSong from '../components/AddSong';
 import store from '../store';
 import {loadAllSongs, addSongToPlaylist} from '../action-creators/playlists';
+import { connect } from 'react-redux';
+
 
 class AddSongContainer extends React.Component {
 
@@ -48,6 +50,7 @@ class AddSongContainer extends React.Component {
 
   }
 
+
   render() {
 
     const songs = this.state.songs;
@@ -62,6 +65,8 @@ class AddSongContainer extends React.Component {
         handleSubmit={this.handleSubmit}/>
     );
   }
+
+
 }
 
 export default AddSongContainer;
